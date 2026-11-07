@@ -4,3 +4,21 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+# Windowing + OpenGL context
+winit = "0.30"
+glutin = "0.32"
+glutin-winit = "0.5"
+raw-window-handle = "0.6"
+glow = "0.14"
+
+# Dear ImGui (versions must stay in lock-step: imgui 0.12 <-> glow-renderer/winit-support 0.13)
+imgui = "0.12"
+imgui-glow-renderer = "0.13"
+imgui-winit-support = "0.13"
+
+# Maths + texture loading
+glam = "0.30"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+# Physics: arena-backed generic tree that wraps each Ball in a node
+indextree = "4.9"
